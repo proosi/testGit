@@ -1,0 +1,11 @@
+Komponenty inline 
+Usuwamy URL z templateURL
+
+	template: ` treść html `, 
+	styles: [` treść css `]
+	
+Uwaga na odwrotne apostrofy.
+
+Ponieważ jest html można osadzić drugi komponent 
+	
+	`<app-test></app-test>`
