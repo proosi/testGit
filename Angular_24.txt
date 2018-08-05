@@ -1,0 +1,60 @@
+Aplikacja Angular startuje z pliku 
+	
+	main.ts -> platformBrowserDynamic().bootstrapModule(AppModule)
+
+rozpoznaje, że modułem startowym jest 
+
+	AppModule 
+
+zdefiniowanym w pliku app.module.ts
+	
+	app.modules.ts
+
+Plik app.module.ts posiada dekorator @NgModule, w którym określa się 
+z jakich komponentów składa się aplikacja:
+- dyrektywy
+- importów
+- serwisów
+
+W polu bootstrap wskazywany jest komponent startowy.
+	
+	import { BrowserModule } from '@angular/platform-browser';
+	import { NgModule } from '@angular/core';
+
+	import { AppComponent } from './app.component';
+
+	@NgModule({
+		declarations: [
+		AppComponent,
+	],
+	imports: [
+		BrowserModule
+	],
+	providers: [],
+		bootstrap: [AppComponent]
+	})
+	export class AppModule { }
+	
+Aplikacja webowa staruje z pliku
+	
+	index.html
+	
+w którym selektor <app-root></app-root> wskazuje na znacznik
+
+	selector: 'app-root'
+	
+w komponencie 
+	
+	app.component.ts	
+	
+	import { Component } from '@angular/core';
+	
+	@Component({
+		selector: 'app-root',
+		templateUrl: './app.component.html',
+		styleUrls: ['./app.component.css']
+	})
+	export class AppComponent {
+		title = 'TestAngular';
+	}
+	

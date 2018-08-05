@@ -1,0 +1,15 @@
+Plik Readme w katalogu projektu zawiera ściągę poleceń.
+
+Polecenie generowania nowego komponentu
+
+	ng generate component nazwa_komponentu 
+
+Nazwa komponentu składa się z przedrostka określonego w pliku:
+
+	.angular.json - "prefix": "app"
+	
+Plik 
+	
+	app.component.spec.ts - nie jest wymagany
+	
+służy do testowania komponentu.
